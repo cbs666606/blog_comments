@@ -1,0 +1,96 @@
+/* Custom Giscus dark theme to match the site's warm dark mode */
+:root {
+  /* Base colors */
+  --giscus-background: #1e1a17; /* Very dark brown background */
+  --giscus-text-color: #e8e1d9; /* Warm off-white text */
+  --giscus-secondary-text-color: #b5a89c; /* Slightly muted text */
+
+  /* Input elements */
+  --giscus-input-background: #2a2520; /* Slightly lighter brown for inputs */
+  --giscus-input-border-color: #3d342d; /* Dark brown border */
+  
+  /* Buttons and interactive elements */
+  --giscus-button-background: #b88a5c; /* Amber button */
+  --giscus-button-text-color: #1e1a17; /* Dark text for buttons */
+  --giscus-button-hover-background: #d4a76a; /* Lighter amber for hover */
+  
+  /* Links and accents */
+  --giscus-accent-color: #d4a76a; /* Gold/amber for links */
+  --giscus-reaction-button-border-color: #3d342d; /* Dark brown border */
+  --giscus-reaction-button-background: #2a2520; /* Slightly lighter than background */
+  --giscus-reaction-button-hover-background: #35302a; /* Subtle hover effect */
+  
+  /* Cards and containers */
+  --giscus-card-background: #262220; /* Slightly lighter brown for cards */
+  --giscus-card-border-color: #3d342d; /* Dark brown border */
+  --giscus-popover-background: #262220; /* Match card background */
+  --giscus-popover-border-color: #3d342d; /* Match border */
+  
+  /* Code and blockquotes */
+  --giscus-markdown-code-background: #2a2520; /* Dark background for code */
+  --giscus-markdown-code-text-color: #e8e1d9; /* Light text color */
+  --giscus-markdown-quote-border-color: #b88a5c; /* Amber for quotes */
+}
+
+/* Ensure links inside Markdown content match our theme */
+.gsc-reactions .gsc-reaction:hover,
+.gsc-comment-box .gsc-comment-box-tabs .gsc-comment-box-tab:hover,
+.gsc-comment-box .gsc-comment-box-tabs .gsc-comment-box-tab.selected,
+.markdown-body a {
+  color: var(--giscus-accent-color) !important;
+}
+
+.markdown-body a:hover {
+  color: #e8c496 !important; /* Lighter gold for hover */
+}
+
+/* Style the "Send comment" button */
+.gsc-comment-box-bottom .gsc-submit {
+  background: var(--giscus-button-background) !important;
+  color: var(--giscus-button-text-color) !important;
+}
+
+.gsc-comment-box-bottom .gsc-submit:hover {
+  background: var(--giscus-button-hover-background) !important;
+}
+
+/* Give comment textarea a subtle background */
+.gsc-comment-box-textarea {
+  background: var(--giscus-input-background) !important;
+  border-color: var(--giscus-input-border-color) !important;
+}
+
+/* Style comment reactions */
+.gsc-upvotes {
+  color: var(--giscus-secondary-text-color) !important;
+}
+
+.gsc-reactions-count {
+  color: var(--giscus-text-color) !important;
+}
+
+/* Ensure comment author names are properly styled */
+.gsc-comment-author-name a {
+  color: var(--giscus-accent-color) !important;
+  font-weight: 600;
+}
+
+/* Style header elements */
+.gsc-header {
+  border-bottom-color: var(--giscus-input-border-color) !important;
+}
+
+.gsc-comments-count,
+.gsc-comments-count-separator {
+  color: var(--giscus-secondary-text-color) !important;
+}
+
+/* Add a subtle box shadow to comments */
+.gsc-comment {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ensure inline code elements are visible */
+.markdown-body code {
+  background-color: #35302a !important;
+} 
